@@ -75,6 +75,9 @@ CREATE TABLE ordem_servico (
     FOREIGN KEY (cliente_id) REFERENCES cliente(id) ON DELETE CASCADE,
     FOREIGN KEY (moto_id) REFERENCES motos(id) ON DELETE CASCADE
 );
+
+
+```
 ⚙️ Tecnologias
 PHP 7+
 
