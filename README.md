@@ -51,7 +51,7 @@ CREATE TABLE cliente (
 );
 Motos
 sql
-Copiar código
+
 CREATE TABLE motos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     cliente_id INT NOT NULL,
@@ -64,7 +64,7 @@ CREATE TABLE motos (
 );
 Ordem de Serviço (OS)
 sql
-Copiar código
+
 CREATE TABLE ordem_servico (
     id INT AUTO_INCREMENT PRIMARY KEY,
     cliente_id INT NOT NULL,
