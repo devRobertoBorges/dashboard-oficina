@@ -32,6 +32,7 @@ Funcionalidades do MVP:
 ├─ conexao.php → Conexão com o banco de dados
 ├─ funcoes.php → Funções reutilizáveis (buscar clientes, motos)
 └─ README.md → Documentação
+└─ esbocoOficina → Esqueleto do sistema escrito.
 
 yaml
 Copiar código
