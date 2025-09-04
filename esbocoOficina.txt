@@ -1,0 +1,78 @@
+🏍️ Esboço do index.php (Dashboard do Sistema)
+1. Boas-vindas
+
+Uma área no topo com:
+
+Nome do sistema: “Sistema de Gestão – Oficina de Motos”.
+
+Mensagem de boas-vindas:
+
+“Bem-vindo(a), escolha uma das opções abaixo para começar.”
+
+2. Menu / Navegação
+
+Uma barra de navegação ou menu lateral (dependendo do layout que escolher).
+
+Links principais:
+
+Clientes → abre clientes.php (cadastro e listagem de clientes).
+
+Motos → abre motos.php (cadastro e listagem de motos).
+
+Ordens de Serviço → abre os.php (criação, consulta, atualização).
+
+Relatórios → abre relatorios.php (faturamento).
+
+3. Atalhos Rápidos (Cards ou Botões grandes)
+
+Área central com blocos clicáveis:
+
+➕ Cadastrar Cliente (atalho direto para o formulário de cliente).
+
+➕ Abrir Nova OS (atalho para iniciar ordem de serviço).
+
+📋 Consultar OS (atalho para a lista de ordens).
+
+💰 Relatório de Faturamento (atalho para os relatórios).
+
+Esses atalhos podem ser apresentados como cards (caixinhas) ou botões destacados.
+
+4. Resumo Rápido (Dashboard Informativo)
+
+Uma seção com indicadores (estatísticas principais):
+
+👤 Total de Clientes Cadastrados
+
+🏍️ Total de Motos Cadastradas
+
+🔧 OS em Aberto / Em andamento
+
+✅ OS Finalizadas
+
+💰 Faturamento do mês
+
+Cada indicador poderia aparecer em uma caixinha com número destacado, tipo:
+
+Clientes: 120 | OS em andamento: 8 | OS finalizadas: 45 | Faturamento: R$ 32.500
+
+-MELHORIAS
+
+
+
+* selecionar cliente pelo ID
+
+<select name="cliente_id">
+    <?php
+    $result = $pdo->query("SELECT id, nome FROM clientes");
+    while ($row = $result->fetch()) {
+        echo '<option value="'.$row['id'].'">'.$row['nome'].'</option>';
+    }
+    ?>
+</select>
+
+* autocomplete buscar clientes
+
+🔎 Opção 2 – Autocomplete (caixa de texto que já busca no BD)
+
+Você pode usar um <input> simples para o nome do cliente e, ao digitar, rodar uma consulta AJAX que retorna os clientes do banco.
+Exemplo (mais avançado): usar jQuery UI Autocomplete ou até mesmo só fetch() do PHP.
